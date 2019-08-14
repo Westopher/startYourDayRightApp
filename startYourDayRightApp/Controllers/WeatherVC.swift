@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class WeatherVC: UIViewController {
     
@@ -28,7 +29,8 @@ class WeatherVC: UIViewController {
                     let result = try decoder.decode(RootWeather.self, from: data!)
             
                     DispatchQueue.main.async {
-                        self.tempDisplayLabel.text = "\(result.main?.temp)" 
+                        self.tempDisplayLabel.text = "\(result.main?.temp)"
+                        print(result.main?.temp)
                     }
                 } catch {
                     print("could not decode the JSON")
