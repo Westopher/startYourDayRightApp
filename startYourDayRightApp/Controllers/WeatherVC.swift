@@ -10,21 +10,17 @@ import UIKit
 
 class WeatherVC: UIViewController {
 
+        var weatherURL = "api.openweathermap.org/data/2.5/weather?lat=35&lon=139"
+        var appID = "61fe2713c932b2a01162cf784e550f91"
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }
