@@ -14,6 +14,7 @@
 		3D30045A2302F0720006032D /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3004592302F0720006032D /* NewsVC.swift */; };
 		3D30045C2302F0800006032D /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D30045B2302F0800006032D /* WeatherVC.swift */; };
 		3D30045E2302F08C0006032D /* SportsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D30045D2302F08C0006032D /* SportsVC.swift */; };
+		3DF61AA42304338200075AF9 /* weatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF61AA32304338200075AF9 /* weatherModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3D3004592302F0720006032D /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
 		3D30045B2302F0800006032D /* WeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
 		3D30045D2302F08C0006032D /* SportsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsVC.swift; sourceTree = "<group>"; };
+		3DF61AA32304338200075AF9 /* weatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		3D3004542302ED870006032D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3DF61AA32304338200075AF9 /* weatherModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				3D3004432302EB800006032D /* AppDelegate.swift in Sources */,
 				3D30045E2302F08C0006032D /* SportsVC.swift in Sources */,
 				3D30045C2302F0800006032D /* WeatherVC.swift in Sources */,
+				3DF61AA42304338200075AF9 /* weatherModel.swift in Sources */,
 				3D30045A2302F0720006032D /* NewsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
