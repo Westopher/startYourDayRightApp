@@ -21,13 +21,15 @@ class WeatherVC: UIViewController {
         let weatherURL = "\(sampleAPICall)"
         
         guard let url = URL(string: weatherURL) else { return print("could not get url") }
-        let session = URLSession.shared
-        let dataTask = session.dataTask(with: url) { (data, response, error) in
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
             if error == nil && data != nil {
                 do {
                     let decoder = JSONDecoder()
                     let result = try decoder.decode(RootWeather.self, from: data!)
-                    print("\(result.main?.temp)")
+            
+                    DispatchQueue.main.async {
+                        self.tempDisplayLabel.text = "\(result.main?.temp)" 
+                    }
                 } catch {
                     print("could not decode the JSON")
                     return
