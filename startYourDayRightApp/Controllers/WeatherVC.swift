@@ -20,7 +20,7 @@ class WeatherVC: UIViewController {
         
         let weatherURL = "\(sampleAPICall)"
         
-        guard let url = URL(string: sampleAPICall) else { return print("could not get url") }
+        guard let url = URL(string: weatherURL) else { return print("could not get url") }
         let session = URLSession.shared
         let dataTask = session.dataTask(with: url) { (data, response, error) in
             if error == nil && data != nil {
@@ -41,7 +41,7 @@ class WeatherVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        getWeatherJSON()
         
     }
     
