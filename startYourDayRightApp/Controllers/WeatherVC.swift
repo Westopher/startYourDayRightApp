@@ -15,9 +15,10 @@ class WeatherVC: UIViewController {
     func createUrl() {
         var latitude: String = ""
         var longitude: String = ""
-    https://openweathermap.org/data/2.5/weather?lat=35.111&lon=139.111&appid=61fe2713c932b2a01162cf784e550f91
-        let weatherURL = "https://openweathermap.org/data/2.5/weather?lat=74.0060&lon=74.0060&appid=61fe2713c932b2a01162cf784e550f91"
+        var sampleAPICall = "http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=61fe2713c932b2a01162cf784e550f91"
         var appID = "61fe2713c932b2a01162cf784e550f91"
+    
+        let weatherURL = "\(sampleAPICall)"
     }
     
     override func viewDidLoad() {
