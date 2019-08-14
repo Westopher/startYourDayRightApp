@@ -16,7 +16,7 @@ class WeatherVC: UIViewController {
     func getWeatherJSON() {
         //var latitude: String = ""
         //var longitude: String = ""
-        var sampleAPICall = "http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=61fe2713c932b2a01162cf784e550f91"
+        var sampleAPICall = "http://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&APPID=61fe2713c932b2a01162cf784e550f91"
         //var appID = "61fe2713c932b2a01162cf784e550f91"
         
         let weatherURL = "\(sampleAPICall)"
@@ -27,7 +27,7 @@ class WeatherVC: UIViewController {
             if error == nil && data != nil {
                 do {
                     let decoder = JSONDecoder()
-                    let result = 
+                   // let result = try decoder.decode(<#T##type: Decodable.Protocol##Decodable.Protocol#>, from: data)
                     
                 } catch {
                     print("could not decode the JSON")
