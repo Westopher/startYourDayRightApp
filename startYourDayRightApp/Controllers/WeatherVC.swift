@@ -12,7 +12,6 @@ class WeatherVC: UIViewController {
     
     @IBOutlet weak var tempDisplayLabel: UILabel!
     
-    
     func getWeatherJSON() {
         //var latitude: String = ""
         //var longitude: String = ""
@@ -27,14 +26,15 @@ class WeatherVC: UIViewController {
             if error == nil && data != nil {
                 do {
                     let decoder = JSONDecoder()
-                   // let result = try decoder.decode(<#T##type: Decodable.Protocol##Decodable.Protocol#>, from: data)
-                    
+                    let result = try decoder.decode(RootWeather.self, from: data!)
+                    print("\(result.main?.temp)")
                 } catch {
                     print("could not decode the JSON")
                     return
                 }
             }
-        }
+            
+        }.resume()
         
         
     }
