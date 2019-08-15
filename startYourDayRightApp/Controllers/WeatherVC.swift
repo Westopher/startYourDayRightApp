@@ -13,6 +13,8 @@ class WeatherVC: UIViewController {
     
     @IBOutlet weak var tempDisplayLabel: UILabel!
     
+    var locationManager = CLLocationManager()
+    
     func getWeatherJSON() {
         //var latitude: String = ""
         //var longitude: String = ""
@@ -27,20 +29,18 @@ class WeatherVC: UIViewController {
                 do {
                     let decoder = JSONDecoder()
                     let result = try decoder.decode(RootWeather.self, from: data!)
-            
                     DispatchQueue.main.async {
-                        self.tempDisplayLabel.text = "\(result.main?.temp)"
-                        print(result.main?.temp)
+                        if result.main?.temp == result.main?.temp {
+                        self.tempDisplayLabel.text = "\(String(describing: result.main!.temp!))"
+                        print(result.main!.temp!)
+                        }
                     }
                 } catch {
                     print("could not decode the JSON")
                     return
                 }
             }
-            
         }.resume()
-        
-        
     }
     
     override func viewDidLoad() {
@@ -48,8 +48,5 @@ class WeatherVC: UIViewController {
         getWeatherJSON()
         
     }
-    
-
-   
 
 }
