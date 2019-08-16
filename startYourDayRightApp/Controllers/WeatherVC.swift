@@ -134,6 +134,7 @@ class WeatherVC: UIViewController {
                         
                         condition = (result.weather?[0].id)!
                         weatherIconName = updateWeatherIcon(condition: condition)
+                        self.weatherPictureView.image = UIImage(named: weatherIconName)
                         
                         
 //                        updateWeatherIcon(condition: weatherID!)
