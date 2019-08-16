@@ -31,12 +31,35 @@ class WeatherVC: UIViewController {
                     let decoder = JSONDecoder()
                     let result = try decoder.decode(RootWeather.self, from: data!)
                     DispatchQueue.main.async {
-                        if result.main?.temp != nil {
-                        self.tempDisplay.text = "\(String(describing: result.main?.temp))"
-                        print(result.main!.temp!)
+                        
+                       // result.main?.tempMax != nil, result.main?.tempMin != nil
+                        
+                        //temp
+                        if result.main?.temp != nil  {
+                            let tempResult = Int((result.main?.temp)! - 273.15)
+                            self.tempDisplay.text = "\(String(tempResult)) °C"
+                            print(tempResult)
                         } else {
                             print("result of api call was was nil")
                         }
+                        
+                        //maxtemp
+                        if result.main?.tempMax != nil {
+                            let tempMaxResult = Int((result.main?.tempMax)! - 273.15)
+                            print("\(tempMaxResult)")
+                        } else {
+                            print("no temp max")
+                        }
+                        
+                        //mintemp
+                        if result.main?.tempMin != nil {
+                            let tempMinResult = Int((result.main?.tempMin)! - 273.15)
+                            print("\(tempMinResult)")
+                        } else {
+                            print("no temp max")
+                        }
+                        
+                        
                     }
                 } catch {
                     print("could not decode the JSON")
