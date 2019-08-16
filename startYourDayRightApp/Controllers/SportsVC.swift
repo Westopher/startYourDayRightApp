@@ -10,6 +10,8 @@ import UIKit
 
 class SportsVC: UIViewController {
 
+    var sampleSportsNewsUrl = "https://newsapi.org/v2/top-headlines?sources=bleacher-report,the-sport-bible,espn,bbc-sport&apiKey=5ca10b2d20a545099a108a3aeceb329c"
+    
     @IBOutlet weak var tableView: UITableView!
     var array = ["1","2","3"]
     override func viewDidLoad() {
