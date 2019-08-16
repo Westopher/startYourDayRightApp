@@ -44,16 +44,16 @@ class WeatherVC: UIViewController {
                         }
                         
                         //maxtemp
-                        if result.main?.tempMax != nil {
-                            let tempMaxResult = Int((result.main?.tempMax)! - 273.15)
+                        if result.main?.temp_max != nil {
+                            let tempMaxResult = Int((result.main?.temp_max)! - 273.15)
                             print("\(tempMaxResult)")
                         } else {
                             print("no temp max")
                         }
                         
                         //mintemp
-                        if result.main?.tempMin != nil {
-                            let tempMinResult = Int((result.main?.tempMin)! - 273.15)
+                        if result.main?.temp_min != nil {
+                            let tempMinResult = Int((result.main?.temp_min)! - 273.15)
                             print("\(tempMinResult)")
                         } else {
                             print("no temp max")
