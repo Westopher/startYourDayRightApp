@@ -11,6 +11,7 @@ import Foundation
 
 struct RootWeather: Decodable {
     var main: Main?
+    var weather : [Weather]?
 }
 
 struct Main: Decodable {
@@ -20,4 +21,10 @@ struct Main: Decodable {
     var temp_max : Float?
     var temp_min : Float?
 }
+
+struct Weather: Decodable {
+    var id : Int?
+    var description: String?
+}
+
 

@@ -23,7 +23,7 @@ class WeatherVC: UIViewController {
     func getWeatherJSON() {
         //var latitude: String = ""
         //var longitude: String = ""
-        var sampleAPICall = "http://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&APPID=61fe2713c932b2a01162cf784e550f91"
+        let sampleAPICall = "http://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&APPID=61fe2713c932b2a01162cf784e550f91"
         //var appID = "61fe2713c932b2a01162cf784e550f91"
         
         let weatherURL = "\(sampleAPICall)"
@@ -73,6 +73,8 @@ class WeatherVC: UIViewController {
                             print("no humidity")
                         }
                         
+                        print(result.weather?[0].description)
+                        print(result.weather?[0].id)
                     }
                 } catch {
                     print("could not decode the JSON")
@@ -80,7 +82,54 @@ class WeatherVC: UIViewController {
                 }
             }
         }.resume()
+    
+    func updateWeatherIcon(condition: Int) -> String {
+        
+        switch (condition) {
+            
+        case 0...300 :
+            return "tstorm1"
+            
+        case 301...500 :
+            return "light_rain"
+            
+        case 501...600 :
+            return "shower3"
+            
+        case 601...700 :
+            return "snow4"
+            
+        case 701...771 :
+            return "fog"
+            
+        case 772...799 :
+            return "tstorm3"
+            
+        case 800 :
+            return "sunny"
+            
+        case 801...804 :
+            return "cloudy2"
+            
+        case 900...903, 905...1000  :
+            return "tstorm3"
+            
+        case 903 :
+            return "snow5"
+            
+        case 904 :
+            return "sunny"
+            
+        default :
+            return "no data available for these conditions"
+        }
+        
     }
+    
+    
+    }
+    
+    
     
     
     override func viewDidLoad() {
