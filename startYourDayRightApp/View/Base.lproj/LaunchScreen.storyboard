@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,24 +15,14 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_7740" translatesAutoresizingMaskIntoConstraints="NO" id="aM2-kY-UyP">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0675" translatesAutoresizingMaskIntoConstraints="NO" id="aM2-kY-UyP">
+                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Your Day Informed" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGa-ue-xUe">
-                                <rect key="frame" x="20" y="109" width="200" height="172"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="rCR-4l-9ba"/>
-                                    <constraint firstAttribute="height" constant="172" id="x3c-Wf-wJ9"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="...loading" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGy-hf-jlc">
-                                <rect key="frame" x="191" y="827" width="203" height="55"/>
+                                <rect key="frame" x="152" y="737.33333333333337" width="203" height="54.666666666666629"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -40,13 +30,11 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="sGa-ue-xUe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="91a-BP-YLe"/>
                             <constraint firstAttribute="trailing" secondItem="aM2-kY-UyP" secondAttribute="trailing" id="9dG-3j-31H"/>
-                            <constraint firstItem="sGa-ue-xUe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="65" id="GQj-1d-P6V"/>
+                            <constraint firstAttribute="bottom" secondItem="nGy-hf-jlc" secondAttribute="bottom" constant="20" id="OXz-YX-5gn"/>
                             <constraint firstItem="aM2-kY-UyP" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Xos-be-R9d"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nGy-hf-jlc" secondAttribute="trailing" constant="20" id="bhd-Pt-GpB"/>
+                            <constraint firstAttribute="trailing" secondItem="nGy-hf-jlc" secondAttribute="trailing" constant="20" id="fB7-Su-a5V"/>
                             <constraint firstAttribute="bottom" secondItem="aM2-kY-UyP" secondAttribute="bottom" id="o3z-GN-fwQ"/>
-                            <constraint firstItem="nGy-hf-jlc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="20" id="trv-rP-UV0"/>
                             <constraint firstItem="aM2-kY-UyP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zZb-Lz-f1Z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -58,6 +46,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="IMG_7740" width="3024" height="4032"/>
+        <image name="IMG_0675" width="3024" height="4032"/>
     </resources>
 </document>
