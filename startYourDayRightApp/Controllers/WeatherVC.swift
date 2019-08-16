@@ -11,6 +11,7 @@ import CoreLocation
 
 class WeatherVC: UIViewController {
     
+    @IBOutlet weak var tempDisplay: UILabel!
     @IBOutlet weak var tempDisplayLabel: UILabel!
     
     var locationManager = CLLocationManager()
@@ -30,9 +31,11 @@ class WeatherVC: UIViewController {
                     let decoder = JSONDecoder()
                     let result = try decoder.decode(RootWeather.self, from: data!)
                     DispatchQueue.main.async {
-                        if result.main?.temp == result.main?.temp {
-                        self.tempDisplayLabel.text = "\(String(describing: result.main!.temp!))"
+                        if result.main?.temp != nil {
+                        self.tempDisplay.text = "\(String(describing: result.main?.temp))"
                         print(result.main!.temp!)
+                        } else {
+                            print("result of api call was was nil")
                         }
                     }
                 } catch {
