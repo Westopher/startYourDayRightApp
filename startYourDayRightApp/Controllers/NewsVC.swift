@@ -17,14 +17,6 @@ class NewsVC: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    var sampleSportsNewsUrl = "https://newsapi.org/v2/top-headlines?sources=bleacher-report,four-four-two,the-sport-bible,espn,bbc-sport&apiKey=5ca10b2d20a545099a108a3aeceb329c"
+    
 }
