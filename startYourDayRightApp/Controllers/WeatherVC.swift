@@ -15,7 +15,6 @@ class WeatherVC: UIViewController {
     @IBOutlet weak var tempDisplay: UILabel!
     @IBOutlet weak var maxTempDisplay: UILabel!
     @IBOutlet weak var minTempDisplay: UILabel!
-    @IBOutlet weak var pressureDisplay: UILabel!
     @IBOutlet weak var humidityDisplay: UILabel!
     
     
@@ -30,14 +29,13 @@ class WeatherVC: UIViewController {
         let weatherURL = "\(sampleAPICall)"
         
         guard let url = URL(string: weatherURL) else { return print("could not get url") }
+        
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if error == nil && data != nil {
                 do {
                     let decoder = JSONDecoder()
                     let result = try decoder.decode(RootWeather.self, from: data!)
                     DispatchQueue.main.async {
-                        
-                       // result.main?.tempMax != nil, result.main?.tempMin != nil
                         
                         //temp
                         if result.main?.temp != nil  {
@@ -84,10 +82,12 @@ class WeatherVC: UIViewController {
         }.resume()
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getWeatherJSON()
         
     }
+    
 
 }
