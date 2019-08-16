@@ -16,6 +16,7 @@ class WeatherVC: UIViewController {
     @IBOutlet weak var maxTempDisplay: UILabel!
     @IBOutlet weak var minTempDisplay: UILabel!
     @IBOutlet weak var humidityDisplay: UILabel!
+    @IBOutlet weak var descriptionDisplay: UILabel!
     
     
     var locationManager = CLLocationManager()
@@ -32,6 +33,7 @@ class WeatherVC: UIViewController {
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if error == nil && data != nil {
+               
                 do {
                     let decoder = JSONDecoder()
                     let result = try decoder.decode(RootWeather.self, from: data!)
@@ -71,6 +73,15 @@ class WeatherVC: UIViewController {
                             print("\(humidity)")
                         } else {
                             print("no humidity")
+                        }
+                        
+                        //description
+                        if result.weather?[0].description != nil {
+                            let description = String((result.weather?[0].description)!)
+                            self.descriptionDisplay.text = "\(String(description.uppercased()))."
+                            print("\(description)")
+                        } else {
+                            print("no description")
                         }
                         
                         print(result.weather?[0].description)
