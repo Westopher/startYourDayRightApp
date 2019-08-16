@@ -129,6 +129,7 @@
                         <outlet property="maxTempDisplay" destination="fTW-bf-EHl" id="o5h-t5-6zC"/>
                         <outlet property="minTempDisplay" destination="sqh-vj-mou" id="z3g-hR-PJA"/>
                         <outlet property="tempDisplay" destination="7fu-Lo-EWL" id="mAN-r1-Jqz"/>
+                        <outlet property="weatherPictureView" destination="nSS-Ck-ekL" id="0G9-Af-uR1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T45-Hs-bSQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

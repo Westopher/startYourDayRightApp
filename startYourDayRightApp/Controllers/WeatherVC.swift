@@ -18,6 +18,8 @@ class WeatherVC: UIViewController {
     @IBOutlet weak var humidityDisplay: UILabel!
     @IBOutlet weak var descriptionDisplay: UILabel!
     
+    @IBOutlet weak var weatherPictureView: UIImageView!
+    
     
     var locationManager = CLLocationManager()
     
@@ -84,12 +86,21 @@ class WeatherVC: UIViewController {
                             print("no description")
                         }
                         
+                        var weatherID = result.weather?[0].id
+                        updateWeatherIcon(condition: weatherID!)
+                        self.weatherPictureView.image = UIImage(contentsOfFile: updateWeatherIcon(condition: weatherID!))
+                        
                         print(result.weather?[0].description)
                         print(result.weather?[0].id)
                     }
+                    
+                   
+                    
                 } catch {
                     print("could not decode the JSON")
                     return
+                    
+                   
                 }
             }
         }.resume()
