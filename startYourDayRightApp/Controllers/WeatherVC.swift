@@ -51,6 +51,7 @@ class WeatherVC: UIViewController {
                         //maxtemp
                         if result.main?.temp_max != nil {
                             let tempMaxResult = Int((result.main?.temp_max)! - 273.15)
+                            self.maxTempDisplay.text = "\(String(tempMaxResult)) °C"
                             print("\(tempMaxResult)")
                         } else {
                             print("no temp max")
@@ -59,11 +60,20 @@ class WeatherVC: UIViewController {
                         //mintemp
                         if result.main?.temp_min != nil {
                             let tempMinResult = Int((result.main?.temp_min)! - 273.15)
+                            self.minTempDisplay.text = "\(String(tempMinResult)) °C"
                             print("\(tempMinResult)")
                         } else {
                             print("no temp max")
                         }
                         
+                        //humidity
+                        if result.main?.humidity != nil {
+                            let humidity = Int((result.main?.humidity)!)
+                            self.humidityDisplay.text = "\(String(humidity))%"
+                            print("\(humidity)")
+                        } else {
+                            print("no humidity")
+                        }
                         
                     }
                 } catch {
