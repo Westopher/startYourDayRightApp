@@ -11,8 +11,13 @@ import CoreLocation
 
 class WeatherVC: UIViewController {
     
+    //weather display outlets
     @IBOutlet weak var tempDisplay: UILabel!
-    @IBOutlet weak var tempDisplayLabel: UILabel!
+    @IBOutlet weak var maxTempDisplay: UILabel!
+    @IBOutlet weak var minTempDisplay: UILabel!
+    @IBOutlet weak var pressureDisplay: UILabel!
+    @IBOutlet weak var humidityDisplay: UILabel!
+    
     
     var locationManager = CLLocationManager()
     
